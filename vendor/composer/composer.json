@@ -1,0 +1,5 @@
+{
+    "require": {
+        "hrevert/ht-img-module": "^0.5.1"
+    }
+}
