@@ -12,5 +12,40 @@
  */
 
 return [
-    // ...
+	    'navigation' => [
+        'default' => [
+            [
+                'label' => 'Index',
+                'route' => 'home',
+            ]
+        ],
+        [
+            'label' => 'Application',
+            'route' => 'application',
+            'pages' => [
+                [
+                'label' => 'app_photography',
+                'route' => 'application',
+                'action' => 'photography',
+                ],
+                [
+                'label' => 'app_fineart',
+                'route' => 'application',
+                'action' => 'fineart',
+                ],
+                [
+                'label' => 'app_illustration',
+                'route' => 'application',
+                'action' => 'illustration',
+                ],
+        ],
+    ],
+    ],
+
+
+    'service_manager' => [
+    'factories' => [
+        'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory', // <-- add this
+    ],
+    ],
 ];

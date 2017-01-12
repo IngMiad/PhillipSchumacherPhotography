@@ -1,0 +1,16 @@
+
+$(document).ready( function() {
+
+$("#startpage_layout_p").click( function() {
+
+  });
+
+$("startpage_layout_fa").click( function() {
+    alert("works -> Test 2");
+  });
+
+$("#startpage_layout_bts").click( function() {
+    alert("works -> Test 3");
+  });
+
+});

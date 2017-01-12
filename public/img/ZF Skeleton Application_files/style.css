@@ -1,0 +1,169 @@
+body {
+    overflow: hidden;
+    height : 100%;
+    margin : 0px;
+    background: none;
+    padding-top: 50px;/*
+    padding-bottom: 40px;*/
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+.btn-success {
+    background-color: #57a900;
+    background-image: -moz-linear-gradient(top, #70d900, #57a900);
+    background-image: -ms-linear-gradient(top, #70d900, #57a900);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+    background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+    background-image: -o-linear-gradient(top, #70d900, #57a900);
+    background-image: linear-gradient(top, #70d900, #57a900);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+    background-color: #57a900;
+}
+
+div.container a.navbar-brand > img {
+    display: inline;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: -2px;
+}
+
+.container {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height: 100%;
+    width: 100%;
+    min-height: 100%; 
+}
+
+.container_content {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+
+#container_content {
+    width: 100%;
+    min-height: 100%; 
+}
+
+.startpage_layout_wrapper {
+        height: 100%;
+        min-height: 100%;
+    }
+
+    .row_home {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .startpage_layout {
+        width: 33.3%;
+        height: 100%;
+        min-height: 100%;
+        display: block;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .startpage_layout_wrapper {
+        margin: 0px;
+        padding: 0px;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    #startpage_layout_p {
+        background-image: url(../img/startpage_photography_sarah_tows.jpg);
+        background-size: auto 100%;
+        background-position: center top;
+        background-repeat: no-repeat;
+        height : 100%;
+        min-height: 1200px;
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #startpage_layout_fa {
+        background-image: url(../img/startpage_fineart_flower_rose.jpg);
+        background-size: auto 100%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        height : 100%;
+        min-height: 1200px;
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #startpage_layout_bts {
+        background-image: url(../img/startpage_bts.jpg);
+        background-size: auto 90%;
+        background-position: center top;
+        background-repeat: no-repeat;
+        min-height: 1200px;
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+    }
+
+#footer {
+    color: #9d9d9d;
+    height: 20px;
+    max-height: 20px;
+    min-height: 10px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1280px) { 
+div.cart-collaterals ul.products li.product {
+  float: left;
+  margin-left: 30px;
+  position: relative;
+  width: 160px;
+}
+.coupon input[type="text"] {
+  width: 100px;
+}  
+input[type="submit"], button[type="submit"] {
+  padding: 11px 15px;
+} 
+.col-1, .col-2 {
+  width: 293px;
+}    
+    
+    
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+
+    
+}
+
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+
+    
+    
+}
+
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+    
+      
+}

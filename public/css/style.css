@@ -1,33 +1,413 @@
-body {
-    padding-top: 60px;
-    padding-bottom: 40px;
+
+/* Generel */
+
+html, body {
+    height: 100%;
+    /*overflow: hidden;*/
 }
 
-.zf-green {
-    color: #68b604;
+/**************************
+CONTENT AREA - CATEGORY
+**************************/
+
+/*
+To-Do: use other layout -> background .... & size of the menue / or no menue;
+*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+        .title_category_header {
+            font-size: 20px; 
+            padding: 10px 0px 10px 0px;
+            margin: 0px 0px 0px 0px;
+        }       
+
+        .jumbotron_category_header {
+            width: 100%;
+            height: 40px;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+            background-color: #F0DCC8;
+        }   
+
+    
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+        .title_category_header {
+            font-size: 30px; 
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }       
+
+        .jumbotron_category_header {
+            width: 100%;
+            height: 45px;
+            padding: 5px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }  
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+                    .title_category_header {
+            font-size: 40px; 
+            padding: 10px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }       
+
+        .jumbotron_category_header {
+            width: 100%;
+            height: 70px;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }  
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+                    .title_category_header {
+            font-size: 45px; 
+            padding: 10px 0px 10px 0px;
+            margin: 0px 0px 0px 0px;
+        }       
+
+        .jumbotron_category_header {
+            width: 100%;
+            height: 50px;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }  
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+                    .title_category_header {
+            font-size: 40px; 
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }       
+
+        .jumbotron_category_header {
+            width: 100%;
+            height: 50px;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }  
+    }
+
+/*************************
+    CONTENT AREA  
+**************************/
+
+.content_blurred {
+
+
+    -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+      transition: filter 0.5s;
 }
 
-.btn-success {
-    background-color: #57a900;
-    background-image: -moz-linear-gradient(top, #70d900, #57a900);
-    background-image: -ms-linear-gradient(top, #70d900, #57a900);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
-    background-image: -webkit-linear-gradient(top, #70d900, #57a900);
-    background-image: -o-linear-gradient(top, #70d900, #57a900);
-    background-image: linear-gradient(top, #70d900, #57a900);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+.content {
+    background-image: url(../img/startpage/index_background.jpg); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+    /*transition: filter .5s; /* opacity */
+    height : 100%;
+    margin : 0px;
 }
 
-.btn-success:hover,
-.btn-success:active,
-.btn-success.active,
-.btn-success.disabled,
-.btn-success[disabled] {
-    background-color: #57a900;
+.container {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 100%; 
 }
 
-div.container a.navbar-brand > img {
-    display: inline;
-    margin-right: 4px;
-    margin-top: -2px;
+#index_container_title_menue {
+    width: 100%;
+    position: fixed;
+    top: 5em;
+    text-align: center;
+    font-family: Arial;
+}
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        .index_title > h1 {
+            color: #333;
+            font-weight: bold;  
+            font-size: 35px;
+        }
+
+        .index_menue_subtitle > p, .index_menue_subtitle a {
+               color: #333;
+               font-size: 20px;
+               font-weight: bold;
+        }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+        .index_title > h1 {
+            color: #333;
+            font-weight: bold;  
+            font-size: 40px;
+        }
+
+        .index_menue_subtitle > p, .index_menue_subtitle a {
+               color: #333;
+               font-size: 20px;
+               font-weight: bold;
+        }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        .index_title > h1 {
+              color: #333;
+              font-weight: bold;  
+              font-size: 60px;
+        }
+
+        .index_menue_subtitle > p, .index_menue_subtitle a {
+               color: #333;
+               margin-top: 20px; 
+               font-size: 40px;
+               font-weight: bold;
+        }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        .index_title > h1 {
+              color: #333;
+              font-weight: bold;  
+              font-size: 60px;
+        }
+
+        .index_menue_subtitle > p, .index_menue_subtitle a {
+               color: #333;
+               font-size: 45px;
+               font-weight: bold;
+        }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        .index_title > h1 {
+            color: #333;
+            font-weight: bold;  
+            font-size: 120px;
+        }
+
+        .index_menue_subtitle > p, .index_menue_subtitle a {
+               color: #333;
+               font-size: 50px;
+               font-weight: bold;
+        }
+    }
+
+
+
+/***************************
+ The side navigation menu 
+ ***************************/
+
+#index-sidenav-button {
+    /* Button to open */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    right: 0;
+    overflow-x: hidden;
+    font-size: 3em;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: gray; /* Black*/
+    opacity: .7;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    opacity: 1;
+    text-decoration: none;
+    font-size: 25px;
+    color: #333;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    /* When you mouse over the navigation links, change their color */
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-right .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1280px) { 
+
+.index_container_title_menue {
+    position: fixed;
+    top: 10em;
+    left: 5;
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    color: #333;
+}
+
+.index_title {
+    font-size: 65px;
+    font-weight: bold;
+    
+}
+
+.index_menue_subtitle {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+div.cart-collaterals ul.products li.product {
+  float: left;
+  margin-left: 30px;
+  position: relative;
+  width: 160px;
+}
+.coupon input[type="text"] {
+  width: 100px;
+}  
+input[type="submit"], button[type="submit"] {
+  padding: 11px 15px;
+} 
+.col-1, .col-2 {
+  width: 293px;
+}    
+    
+
+.title_index {
+    z-index: 0.3;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+     
+    .index_container_title_menue {
+        position: fixed;
+        top: 10em;
+        left: 5;
+        width: 100%;
+        text-align: center;
+        font-family: Arial;
+        color: #333;
+    }
+
+    .index_title {
+        font-size: 65px;
+        font-weight: bold;
+        
+    }
+
+    .index_menue_subtitle {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    
+}
+
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+
+    .index_container_title_menue {
+        position: fixed;
+        top: 10em;
+        left: 5;
+        width: 100%;
+        text-align: center;
+        font-family: Arial;
+        color: #333;
+    }
+
+    .index_title {
+        font-size: 20%;
+        font-weight: bold;
+        
+    }
+
+    .index_menue_subtitle {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+}
+
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+    .index_container_title_menue {
+    position: fixed;
+    top: 10em;
+    left: 5;
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    color: #333;
+}
+
+.index_title {
+    font-size: 65px;
+    font-weight: bold;
+    
+}
+
+.index_menue_subtitle {
+    font-size: 40px;
+    font-weight: bold;
+}
 }

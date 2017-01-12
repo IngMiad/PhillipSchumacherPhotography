@@ -1,4 +1,4 @@
-<?= $this->doctype() ?>
+<?php $this->doctype() ?>
 
 <html lang="en" >
     <head>
@@ -30,39 +30,31 @@
         <?= $this->headLink(); ?>
     </head>
     <body>
-
-    <div class="collapse navbar-collapse">
-    <?php // <-- Update this !!
-    /*echo $this->navigation('category')
-              ->menu()
-              ->setMinDepth(0)
-              ->setMaxDepth(0)
-              ->setUlClass('nav navbar-nav');*/
-    ?>
-</div>
-
+    
     <!-- side menue -->
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
       <a href="#">Contact</a>
+      <a href="#">News</a>
       <a href="#">Shop</a>
-      <a href="#">...</a>
-      <a href="#">...</a>
     </div>
 
     <div id="index-sidenav-button">
         <span onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"></span>
     </div>
 
+
+    <!-- Title -->
+    <div id="" class="jumbotron_category_header text-center">
+        <h1 class="title_category_header">Photography</h1>
+    </div>
+
     <!--content-->
-        <div class="container content" id="content_index">
-            <?= $this->layout()->content ?>
+        <div class="content2" id="content_index2">
+            <?= $this->content ?>
         </div>
 
         <?= $this->inlineScript() ?>
     </body>
 </html>
-
-<?
-//http://prooph-software.de/blog/Zend-Framework-2-Navigation-Tutorial.html
-?>

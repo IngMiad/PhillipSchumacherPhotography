@@ -13,6 +13,7 @@ use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
 class IndexControllerTest extends AbstractHttpControllerTestCase
 {
+    
     public function setUp()
     {
         // The module configuration should still be applicable for tests.
@@ -29,6 +30,7 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         parent::setUp();
     }
 
+
     public function testIndexActionCanBeAccessed()
     {
         $this->dispatch('/', 'GET');
@@ -39,11 +41,18 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->assertMatchedRouteName('home');
     }
 
+
     public function testIndexActionViewModelTemplateRenderedWithinLayout()
     {
         $this->dispatch('/', 'GET');
+        $this->headScript()->appendFile(
+        '../../../../public/js/ingaspace.js',
+        'text/javascript',
+        array('conditional' => 'lt IE 7')
         $this->assertQuery('.container .jumbotron');
     }
+
+
 
     public function testInvalidRouteDoesNotCrash()
     {

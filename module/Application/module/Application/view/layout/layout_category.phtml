@@ -1,4 +1,18 @@
-<?= $this->doctype() ?>
+<?php echo $this->doctype() ?>
+<html>
+<head>
+    <?php echo $this->headTitle() ?>
+    <?php echo $this->headLink() ?>
+    <?php echo $this->headStyle() ?>
+    <?php echo $this->headScript() ?>
+</head>
+<body>
+    <?php echo $this->layout()->content ?>
+</body>
+</html>
+
+
+<?php /*$this->doctype() ?>
 
 <html lang="en" >
     <head>
@@ -12,7 +26,7 @@
 
         <!-- Le styles -->
         <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/logo.gif'])
-            ->prependStylesheet($this->basePath('css/style.css'))
+            //->prependStylesheet($this->basePath('css/style.css'))
             ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
             ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
         ?>
@@ -30,24 +44,14 @@
         <?= $this->headLink(); ?>
     </head>
     <body>
-
-    <div class="collapse navbar-collapse">
-    <?php // <-- Update this !!
-    /*echo $this->navigation('category')
-              ->menu()
-              ->setMinDepth(0)
-              ->setMaxDepth(0)
-              ->setUlClass('nav navbar-nav');*/
-    ?>
-</div>
-
+    
     <!-- side menue -->
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
       <a href="#">Contact</a>
+      <a href="#">News</a>
       <a href="#">Shop</a>
-      <a href="#">...</a>
-      <a href="#">...</a>
     </div>
 
     <div id="index-sidenav-button">
@@ -55,14 +59,10 @@
     </div>
 
     <!--content-->
-        <div class="container content" id="content_index">
-            <?= $this->layout()->content ?>
+        <div class="content2" id="content_index2">
+            <?= $this->content2 ?>
         </div>
 
         <?= $this->inlineScript() ?>
     </body>
 </html>
-
-<?
-//http://prooph-software.de/blog/Zend-Framework-2-Navigation-Tutorial.html
-?>

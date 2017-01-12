@@ -15,7 +15,7 @@ return [
     'router' => [
         'routes' => [
             'home' => [
-                'type' => Literal::class,
+                'type' => Segment::class,
                 'options' => [
                     'route'    => '/index',
                     'defaults' => [
@@ -30,7 +30,8 @@ return [
                     'route'    => '/category[/:action]',
                     'defaults' => [
                         'controller' => Controller\CategoryController::class,
-                        'action'     => 'index',
+                        'action'     => 'photography',
+                        'layout'    => 'layout/layout_category.phtml'
                     ],
                 ],
             ],
@@ -54,8 +55,7 @@ return [
         'exception_template'       => 'error/index',
         'template_map' => [
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'layout/layout_category'           => __DIR__ . '/../view/layout/layout_category.phtml',
-            'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
+            'application/index' => __DIR__ . '/../view/application/index/index.phtml',
             'application/category/photography' => __DIR__ . '/../view/application/category/photography.phtml',
             'application/category/fineart' => __DIR__ . '/../view/application/category/fineart.phtml',
             'application/category/illustrations' => __DIR__ . '/../view/application/category/illustrations.phtml',
@@ -68,69 +68,37 @@ return [
         ],
     ],
 
-
-
-    'navigation' => [
-        // #1
-        'default' => [
-            [
-                'label' => 'Index',
-                'route' => 'home',
-            ]
-        ],
-        // #2
-        'category' => [
-            'label' => 'Application',
-            'route' => 'application',
-            'pages' => [
-                [
-                'label' => 'app_photography',
-                'route' => 'application',
-                'action' => 'photography',
-                ],
-                [
-                'label' => 'app_fineart',
-                'route' => 'application',
-                'action' => 'fineart',
-                ],
-                [
-                'label' => 'app_illustration',
-                'route' => 'application',
-                'action' => 'illustration',
-                ],
-            ],
-        ],
-    ],
-
-
     'service_manager' => [
     'factories' => [
-        'category_navigation' => Application\Navigation\Service\CategoryNavigationFactory::class, // <-- add this
+        'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory', // <-- add this
     ],
-    ],
-
-      /*  //hrevert library -> create filter service
-    'htimg' => [
-        'filters' => [
-            'my_thumbnail' => [ // this is  filter service
-                'type' => 'thumbnail', // this is a filter loader
-                'options' => [  // filter loader passes these options to a Filter which manipulates the image
-                    'width' => 100,
-                    'height' => 100
-                    //'format' => 'jpeg' // format is optional and defaults to the format of given image
-                ],
-            ],        
+    'navigation' => [
+        'default' => [
+            [
+                'label' => 'index',
+                'route' => 'index'
+            ]
         ],
-    ],*/
+        [
+                    'label' => 'application',
+                    'route' => 'category/[:action]',
+                    'pages' => [
+                        [
+                            'label' => 'application',
+                            'route' => 'category/[:action]',
+                            'action' => 'photography',
+                        ],  
+                         [
+                            'label' => 'application',
+                            'route' => 'category/[:action]',
+                            'action' => 'fineart',
+                        ],   
+                         [
+                            'label' => 'application',
+                            'route' => 'category/[:action]',
+                            'action' => 'illustrations',
+                        ],     
 
+    ],
 
 ];
-
-// Create container from array
-$container = new Zend\Navigation\Navigation($pages);
-
-// Store the container in the proxy helper:
-$view->plugin('navigation')->setContainer($container);
-
-// ...or simply:
-$view->navigation($container);
